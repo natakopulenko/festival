@@ -1,0 +1,60 @@
+{% load staticfiles %}
+
+<div class="container-fluid fon">
+  <div class="row">
+	  <div class="nav">
+		  <ul>
+		  	  	<li><a href="/#!/">Головна</a></li>
+		  	  	<li><a href="#"><img src="{% static "source/images/&.png" %}" width="27" height="40">Що таке "Холі"</a></li>
+		  	  	<li><a href="#"><img src="{% static "source/images/foto.png" %}" width="50" height="40">Фото</a></li>
+		  	  	<li><a href="#"><img src="{% static "source/images/play.png" %}" width="39" height="39">Відео</a></li>
+		  	  	<li><a href="#"><img src="{% static "source/images/kontact.png" %}" width="38" height="38">Контакти</a></li>
+		  </ul>
+	  </div>
+  </div>
+  		<div class="fest">
+		<div class="left"> Програма дійства: <br/><a href="#">Фестиваль Фарби Холі</a></div>
+ 	    <div class="right"> <img src="{% static "source/images/point.png" %}" width="23" height="36"> Місце проведення: <br/><a href="#">с.м.т. Заболотів</a> </div>
+
+   </div>
+    <div  class="timer">
+    <div ng-controller="CountdownController" id="numbers">
+            <div>
+                <div><span class="number"><span ng-if="countdown.days<10">0</span>[[countdown.days]]</span><span class="number"><span ng-if="countdown.hours<10">0</span>[[countdown.hours]]</span><span class="number"><span ng-if="countdown.minutes<10">0</span>[[countdown.minutes]]</span><span class="number"><span ng-if="secondsLeft<10">0</span>[[secondsLeft]]</span></div>
+            </div>
+        </div>
+    </div>
+	  <div class="time">
+	  	<div class="times">
+		  	<ul>
+		  		<li>Дні</li>
+		  		<li>Години</li>
+		  		<li>Хвилини</li>
+		  		<li>Секунди</li>
+		  	</ul>
+	  	</div>
+	  </div>
+    <div ng-controller="RegistrationController" class="row-fluid">
+    <form name="regForm" ng-submit="register()">
+	  <div class="forms" >
+	  	<p>Замовлення квитків</p>
+			<img src="{% static "source/images/people.png" %}" width="27" height="37"><input name="name" class="validate" ng-model="registration.name" type="text" id="name" placeholder="Прізвише ім'я"/></br>
+			<img src="{% static "source/images/phone.png" %}" width="30" height="30"><input type="text" id="number" name="number" class="validate" ng-model="registration.number" placeholder="+38 Ваш номер"/></br>
+			<img src="{% static "source/images/color.png" %}" width="23" height="34"><input type="text" name="paint" id="paint" class="validate" ng-model="registration.paint" placeholder="Кількість фарби"/></br>
+	  <button class="btn btn-success">Реєструватись</button>
+          <div ng-if="type_error.length" class="alert alert-danger" style="margin-top: 20px">
+      Будь-ласка, введіть коректні дані.
+    </div>
+          <div ng-if="input_error.length" class="alert alert-danger" style="margin-top: 20px">
+      Будь-ласка, заповніть поле [[input_error]].
+    </div>
+    <div ng-if="answer.length" class="alert alert-success" style="margin-top: 20px">
+      Реєстрація пройшла успішно. Дякуємо)
+    </div></div>
+    </form>
+    </div>
+	  <div class="log">
+<div class="seven"><img src="{% static "source/images/imgo.jpeg" %}" width="35%" height="35%"></div>
+<div class="west"><img src="{% static "source/images/west.png" %}" width="111" height="109"></div>
+</div>
+</div>

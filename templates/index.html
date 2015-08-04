@@ -1,0 +1,45 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html ng-app="pages.main">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link href="{% static "source/styles/style.css" %}" type="text/css" rel="stylesheet" />
+	<link href="{% static "source/styles/bootstrap.css" %}" type="text/css" rel="stylesheet"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.2/angular-route.min.js"></script>
+
+
+
+</head>
+<body ng-controller="ApplicationController">
+
+
+
+  <ng-view></ng-view>
+
+
+    <!--  Scripts-->
+    {# App / Config #}
+    <script src="{% static "source/scripts/landing/app.module.js" %}"></script>
+
+    {# Services #}
+    <script src="{% static "source/scripts/landing/services/utils.service.js" %}"></script>
+    <script src="{% static "source/scripts/landing/services/registration.service.js" %}"></script>
+
+
+    {# Directives #}
+
+
+    {# Controllers #}
+    <script src="{% static "source/scripts/landing/controllers/application.controller.js" %}"></script>
+    <script src="{% static "source/scripts/landing/controllers/countdown.controller.js" %}"></script>
+    <script src="{% static "source/scripts/landing/controllers/registration.controller.js" %}"></script>
+
+
+</body>
+</html>
