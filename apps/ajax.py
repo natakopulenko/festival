@@ -24,7 +24,7 @@ class CountView(View):
                                  }})
 
     def get(self, request):
-        from_date = datetime(2015, 8, 20, 15, 0, 0, 0)
+        from_date = datetime(2015, 8, 23, 18, 0, 0, 0)
         date_now = datetime.now()
         time_delta = from_date-date_now
         if time_delta.days < 0:
@@ -71,6 +71,6 @@ class RegisterView(View):
 
         send_mail('Реєстрація на фестиваль', u'Доброго дня, мене звати ' + unicode(parameters['name']) +
                   u'.Я бажаю зареєструватись на фестиваль "Холі". Мій номер телефону: ' + unicode(parameters['number']) +
-                  u'. Кількість фарби: ' + unicode(parameters['paint']), 'natali.kopilenko@mail.ru',
-                  ['natali.kopilenko@mail.ru'], fail_silently=False)
+                  u'. Кількість фарби: ' + unicode(parameters['paint']), 'festival.kholi@mail.ru',
+                  ['kosovuch.roman@gmail.com'], fail_silently=False)
         return self.PostCodes.ok(parameters['name'])

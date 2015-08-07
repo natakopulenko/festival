@@ -5,16 +5,16 @@
 	  <div class="nav">
 		  <ul>
 		  	  	<li><a href="/#!/">Головна</a></li>
-		  	  	<li><a href="#"><img src="{% static "source/images/&.png" %}" width="27" height="40">Що таке "Холі"</a></li>
-		  	  	<li><a href="#"><img src="{% static "source/images/foto.png" %}" width="50" height="40">Фото</a></li>
-		  	  	<li><a href="#"><img src="{% static "source/images/play.png" %}" width="39" height="39">Відео</a></li>
-		  	  	<li><a href="#"><img src="{% static "source/images/kontact.png" %}" width="38" height="38">Контакти</a></li>
+		  	  	<li><a target="_blank" href="https://vk.com/topic-61581557_33041385"><img src="{% static "source/images/&.png" %}" width="27" height="40">Що таке "Холі"</a></li>
+		  	  	<li><a target="_blank" href="https://vk.com/album-61581557_219141284"><img src="{% static "source/images/foto.png" %}" width="50" height="40">Фото</a></li>
+		  	  	<li><a target="_blank" href="https://www.youtube.com/watch?v=0xmIB8HRgJ4"><img src="{% static "source/images/play.png" %}" width="39" height="39">Відео</a></li>
+		  	  	<li><a target="_blank" href="https://vk.com/topic-61581557_33041787"><img src="{% static "source/images/kontact.png" %}" width="38" height="38">Контакти</a></li>
 		  </ul>
 	  </div>
   </div>
   		<div class="fest">
-		<div class="left"> Програма дійства: <br/><a href="#">Фестиваль Фарби Холі</a></div>
- 	    <div class="right"> <img src="{% static "source/images/point.png" %}" width="23" height="36"> Місце проведення: <br/><a href="#">с.м.т. Заболотів</a> </div>
+		<div class="left"> Програма дійства: <br/><a target="_blank" href="https://vk.com/topic-61581557_33041717">Фестиваль Фарби Холі</a></div>
+ 	    <div class="right"> <img src="{% static "source/images/point.png" %}" width="23" height="36"> Місце проведення: <br/><a target="_blank" href="https://vk.com/topic-61581557_33041750">с.м.т. Заболотів</a> </div>
 
    </div>
     <div  class="timer">
@@ -37,11 +37,14 @@
     <div ng-controller="RegistrationController" class="row-fluid">
     <form name="regForm" ng-submit="register()">
 	  <div class="forms" >
-	  	<p>Замовлення квитків</p>
+	  	<p>Замовлення квитків та фарби</p>
 			<img src="{% static "source/images/people.png" %}" width="27" height="37"><input name="name" class="validate" ng-model="registration.name" type="text" id="name" placeholder="Прізвише ім'я"/></br>
 			<img src="{% static "source/images/phone.png" %}" width="30" height="30"><input type="text" id="number" name="number" class="validate" ng-model="registration.number" placeholder="+38 Ваш номер"/></br>
 			<img src="{% static "source/images/color.png" %}" width="23" height="34"><input type="text" name="paint" id="paint" class="validate" ng-model="registration.paint" placeholder="Кількість фарби"/></br>
-	  <button class="btn btn-success">Реєструватись</button>
+	  <button class="btn btn-success">Замовити</button>
+          <div id="price">Попередній продаж квитків 20 грн,<br/>
+              попередній продаж фарби 25 грн 100 гр,<br/>
+              на свято на одну людину потрібно приблизно 200 гр фарби</div>
           <div ng-if="type_error.length" class="alert alert-danger" style="margin-top: 20px">
       Будь-ласка, введіть коректні дані.
     </div>
@@ -49,12 +52,16 @@
       Будь-ласка, заповніть поле [[input_error]].
     </div>
     <div ng-if="answer.length" class="alert alert-success" style="margin-top: 20px">
-      Реєстрація пройшла успішно. Дякуємо)
+      Ваше замовлення прийнято. Дякуємо)
     </div></div>
     </form>
     </div>
+    <div class="log1">
+     <div class="chris"><img src="{% static "source/images/chris.jpeg" %}" width="35%" height="35%"></div>
+          <div class="nimpha"><img src="{% static "source/images/nimpha.jpeg" %}" width="100%" height="100%"></div></div>
 	  <div class="log">
-<div class="seven"><img src="{% static "source/images/imgo.jpeg" %}" width="35%" height="35%"></div>
+
+<div class="seven"><img src="{% static "source/images/seven.jpeg" %}" width="24%" height="24%"></div>
 <div class="west"><img src="{% static "source/images/west.png" %}" width="111" height="109"></div>
 </div>
 </div>

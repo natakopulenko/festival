@@ -33,7 +33,7 @@ angular.module('pages.main').controller('CountdownController', ['$scope','$timeo
                     }
                     $scope.secondsLeft = countDown; // update scope
                     countDown--; // -1
-                    $timeout(countDowner, 970); // loop it again
+                    $timeout(countDowner, 980); // loop it again
                 }
         };
         countDowner();

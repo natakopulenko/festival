@@ -101,10 +101,10 @@ STATICFILES_FINDERS = (
      "django.contrib.staticfiles.finders.FileSystemFinder",
      "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 )
-DEFAULT_FROM_EMAIL = 'natali.kopilenko@mail.ru'
+DEFAULT_FROM_EMAIL = 'festival.kholi@mail.ru'
 EMAIL_HOST = 'smtp.mail.ru'
-EMAIL_HOST_USER = 'natali.kopilenko@mail.ru'
-EMAIL_HOST_PASSWORD = '******'
+EMAIL_HOST_USER = 'festival.kholi@mail.ru'
+EMAIL_HOST_PASSWORD = 'lol0077'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
